@@ -17,9 +17,10 @@ with open(filename, 'r') as datafile:
         split_line = line.split()
         data['date'].append(split_line[0])
         data['time'].append(split_line[1])
-        data['tempout'].append(split_line[2])
+        data['tempout'].append(int(float(split_line[2])))
 
 # DEBUG
+
 #print(data[8][4])
 #print(data[8][:5])
 #print(data[8][::2])
