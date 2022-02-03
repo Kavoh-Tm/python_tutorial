@@ -1,8 +1,9 @@
 # Column names and column indices to read
-columns = {'date':0, 'time':1, 'tempout':2}
+columns = {'date':0, 'time':1, 'tempout':2, 'windspeed':7}
 
 # Data types for each column (only if non-string)
-types = {'tempout': float}
+types = {'tempout': float, 'windspeed' :float}
+#types= {'date': float}
 
 
 
@@ -20,6 +21,7 @@ with open(filename, 'r') as datafile:
     #read the first three lines (header)
     for _ in range(3):
         datafile.readline()
+        
 
 
     #Read and parse the rest of the file
@@ -32,4 +34,3 @@ with open(filename, 'r') as datafile:
             data[column].append(value)
 
 #DEBUG
-print (type(data))
