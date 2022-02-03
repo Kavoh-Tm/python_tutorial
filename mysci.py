@@ -31,3 +31,5 @@ with open(filename, 'r') as datafile:
             value = t(split_line[i])
             data[column].append(value)
 
+#DEBUG
+print (type(data))
